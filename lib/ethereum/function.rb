@@ -29,8 +29,7 @@ module Ethereum
     end
 
     def self.calc_id(signature)
-      Digest::SHA3.hexdigest(signature, 256)[0..7]
+      Digest::Keccak.hexdigest(signature, 256)[0..7]
     end
-
   end
 end
